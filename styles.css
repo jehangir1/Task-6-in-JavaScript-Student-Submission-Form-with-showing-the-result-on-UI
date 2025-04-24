@@ -1,0 +1,169 @@
+:root {
+    --primary-color: #5D5CDE;
+    --primary-hover: #4b4ab7;
+    --text-color: #333;
+    --background-color: #fff;
+    --card-background: #fff;
+    --border-color: #ddd;
+    --input-background: #fff;
+    --success-background: #e8f5e9;
+    --success-text: #2e7d32;
+    --success-border: #a5d6a7;
+    --link-color: #3367d6;
+}
+
+/* Dark mode variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #f0f0f0;
+        --background-color: #121212;
+        --card-background: #1e1e1e;
+        --border-color: #444;
+        --input-background: #2d2d2d;
+        --success-background: #1b3a27;
+        --success-text: #81c784;
+        --success-border: #2e7d32;
+        --link-color: #90caf9;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    transition: background-color 0.3s;
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    flex: 1 1 200px;
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(93, 92, 222, 0.2);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.hidden {
+    display: none;
+}
+
+.success-message {
+    background-color: var(--success-background);
+    border: 1px solid var(--success-border);
+    color: var(--success-text);
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.success-message h3 {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.submission-details {
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+
+.reset-form {
+    margin-top: 16px;
+    background: none;
+    border: none;
+    color: var(--link-color);
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.reset-form:hover {
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .form-group {
+        flex: 1 1 100%;
+    }
+}

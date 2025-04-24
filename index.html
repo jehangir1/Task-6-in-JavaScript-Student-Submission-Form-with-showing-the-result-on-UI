@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Submission Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-card">
+            <h1 class="form-title">Student Submission Form</h1>
+            
+            <form class="student-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" name="firstName" required placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" name="lastName" required placeholder="Enter last name">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" name="email" required placeholder="Enter email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address *</label>
+                    <textarea name="address" required placeholder="Enter full address" rows="2"></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" name="phone" required placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age *</label>
+                        <input type="number" name="age" required min="16" max="100" placeholder="Age">
+                    </div>
+                    <div class="form-group">
+                        <label for="studentId">Student ID *</label>
+                        <input type="text" name="studentId" required placeholder="Enter student ID">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+            
+            <div class="submission-result hidden">
+                <div class="success-message">
+                    <h3>Form Submitted Successfully!</h3>
+                    <p class="submission-details"></p>
+                    <button class="reset-form">Submit another response</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
